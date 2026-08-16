@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int nearestDrone(vector<vector<int>>& drones, vector<int>& target) {
+        int ans=0,mnidx=INT_MAX,mn=INT_MAX;
+        bool found=false;
+        for(int i=0;i<drones.size();i++){
+            // if((abs(drones[i][0]-target[0])+abs(drones[i][1]-target[1]))<= drones[i][2]){
+                ans=abs(drones[i][0]-target[0])+abs(drones[i][1]-target[1]);
+            //     found=true;
+            // }
+            if(ans<=drones[i][2]){
+                found=true;
+            
+            if(ans<mn){
+                mn=ans;
+                mnidx=i;
+            }}
+            // else if(ans==mn&& i<mnidx){
+            //     mnidx=i;
+            // }
+        }
+        
+        if(found) return mnidx;
+        return -1;
+        // else return -1;
+    }
+};
