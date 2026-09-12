@@ -24,3 +24,4 @@ int main() {
     }
 
 }
+//left nundi entha dhooram, right nundi entha dhooram, end cheyadaniki dani lo minimum ni print cheyali, anthe.
